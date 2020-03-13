@@ -1,0 +1,9 @@
+12:15:37.735 [main] ERROR alpha.Demo - Button is not working
+12:15:37.740 [main] FATAL alpha.Demo - Button is missing
+12:17:21.863 [main] ERROR alpha.Demo - Button is not working
+12:17:21.869 [main] FATAL alpha.Demo - Button is missing
+12:17:33.401 [main] ERROR alpha.Demo - Button is not working
+12:17:33.408 [main] FATAL alpha.Demo - Button is missing
+12:17:50.324 [main] ERROR alpha.Demo - Button is not working
+12:17:50.329 [main] FATAL alpha.Demo - Button is missing
+12:18:12.022 [main] DEBUG beta.DemoB - Beta -- I am debugging
