@@ -1,7 +1,8 @@
-package pageObjectPattern.ObjectRepository;
+package mavenSelenium.pageObject.Repository;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public class RediffLoginPage {
 	
@@ -13,6 +14,8 @@ public class RediffLoginPage {
 	By passwordField = By.cssSelector("#password");
 	
 	By signButton = By.xpath("//input[@name='proceed']");
+	
+	By home = By.partialLinkText("rediff.com");
 	
 	
 	//Constructor
@@ -32,6 +35,10 @@ public class RediffLoginPage {
 	
 	public void clickSignButton() {
 		driver.findElement(signButton).click();
+	}
+	
+	public WebElement Home() {
+		  return driver.findElement(home);
 	}
 	
 	

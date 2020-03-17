@@ -1,10 +1,11 @@
-package pageObjectPattern.TestCases;
+package mavenSelenium.pageObject.TestCases;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
-import pageObjectPattern.ObjectRepository.RediffLoginPage;
+import mavenSelenium.pageObject.Repository.RediffHomePage;
+import mavenSelenium.pageObject.Repository.RediffLoginPagePageFactory;
 
 public class LoginApp {
 	
@@ -18,11 +19,20 @@ public class LoginApp {
 		driver.get("https://mail.rediff.com/cgi-bin/login.cgi");
 		
 		
-		RediffLoginPage login = new RediffLoginPage(driver);
+		//RediffLoginPage login = new RediffLoginPage(driver);
+		RediffLoginPagePageFactory login = new RediffLoginPagePageFactory(driver);
 		
 		login.setUsername("misskiddo");
 		login.setPassword("12234");
 		login.clickSignButton();
+		
+		login.Home().click();
+		
+		RediffHomePage home = new RediffHomePage(driver);
+		home.search("Hola caracola");
+		
+	
+		
 		
 	}
 
