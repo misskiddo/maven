@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" thread-count="2">
+	<parameter name="URL" value ="qaclickacademy.com"/>
+	<parameter name="API/username" value ="123456"/>
+
+	<listeners>
+		<listener class-name="test.Listeners"/>
+	</listeners>
+	<test thread-count="5" name="My first test folder">
+		<classes>
+			<class name="test.Day1" />
+			<class name="test.Day2">
+				<methods>
+					<exclude name="demo.*"/>
+				</methods>
+			
+			</class>
+			<class name="test.Day3">
+				<methods>
+					<include name="demo"/>
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+
+	<test name="Second folder">
+		<classes>
+			<class name="test.Day4">
+				<methods>
+				  <exclude name="demo2"/>			
+				</methods>
+			</class>
+		</classes>
+	</test>
+		<test name="Third folder">
+		
+		<parameter name="URL" value ="thirdFloor.com"/>
+		<classes>
+			<class name="test.Day5">
+				<methods>
+				    <exclude name="demo2"/>			
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite> <!-- Suite -->
